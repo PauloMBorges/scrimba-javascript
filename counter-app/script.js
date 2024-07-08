@@ -8,6 +8,8 @@ let decrementBtn = document.getElementById('decrement-btn')
 decrementBtn.addEventListener('click', decrement)
 let saveBtn = document.getElementById('save-btn')
 saveBtn.addEventListener('click', save)
+let resetBtn = document.getElementById('reset-btn')
+resetBtn.addEventListener('click', reset)
 
 function increment() {
     count += 1
@@ -21,7 +23,13 @@ function decrement() {
 
 function save() {
     history = count
-    saveEl.textContent += history + " / "
+    saveEl.textContent += history + " - "
     count = 0
     countEl.innerText = count
+}
+
+function reset() {
+    count = 0
+    countEl.innerText = count
+    saveEl.textContent = "entries: "
 }
