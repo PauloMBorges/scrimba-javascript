@@ -8,9 +8,14 @@ function increment() {
     countEl.innerText = count
 }
 
+function decrement() {
+    count -= 1
+    countEl.innerText = count
+}
+
 function save() {
     history = count
-    saveEl.textContent += history + " - "
+    saveEl.textContent += history + " / "
     count = 0
     countEl.innerText = count
 }
